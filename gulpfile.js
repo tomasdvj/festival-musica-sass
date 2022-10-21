@@ -14,7 +14,7 @@ function css( done ) {
     
     //! src identifica el archivo y luego ejecuta los pipes
     src('src/scss/**/*.scss') //! Identificar archivo de sass
-        .pipe(plumber())
+        .pipe(plumber()) //! Previene que la ejecucion de gulp se detenga a causa de errores
         .pipe(sass()) //! Compilarlo
         .pipe(dest('build/css')) //! Almacenar en el disco duro
 
